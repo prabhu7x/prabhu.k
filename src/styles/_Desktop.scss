@@ -1,0 +1,89 @@
+@media screen and (min-width: 800px) {
+    #home {
+        h1 {
+            font-size: 7rem;
+            padding: 2rem;
+        }
+        h2 {
+            font-size: 4rem;
+            padding: 1rem;
+            line-height: 4rem;
+            padding: 0 3rem;
+        }
+        button {
+         padding: 1rem 3.5rem;   
+         font-size: 1.5rem;
+        }
+    }
+
+    #about {
+        display: flex;
+        flex-direction: row;
+        gap: 10rem;
+        .hero {
+            width: 40vw;
+            .text-container {
+                p {
+                    font-size: 1.22rem;
+                    font-weight: 350;
+                    line-height: 1.8rem;
+                }
+                .btn-cv {
+                    #gt-project-btn {
+                        width: 50%;
+                        font-size: 1.5rem;
+                    }
+                    }
+                }
+                .avatar {
+                    width: 15vw;
+                }
+        }
+        .lang-icons {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 5rem;
+            img {
+                width: 5rem;
+            }
+        }
+
+    }
+
+    #projects-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 3rem;
+        padding: 5rem;
+            .card {
+                .inner-card {
+                    // .preview-container {
+                    //     // img {
+                    //     // }
+                    // }
+                    .info {
+                        p {
+                            font-size: 1.3rem;
+                            line-height: 2rem;
+                        }
+                        .technologies {
+                            li {
+                                font-size: 1.056rem;
+                            }
+                        }
+                        .url {
+                            a {
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+                }
+            }  
+    }
+}
+
+footer {
+   img {
+    height: 45px;
+   } 
+}

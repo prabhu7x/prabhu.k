@@ -1,0 +1,45 @@
+{
+  "name": "Prabhu .k",
+  "title": "Frontend Developer — turning ideas into seamless user experiences",
+  "about": "I’m a Frontend Developer who loves turning ideas into clean and responsive web experiences. With a strong focus on React, JavaScript, HTML, CSS, Tailwind, and Sass, I enjoy building interfaces that are fast, user-friendly, and work smoothly across devices. I’m always curious to learn new tools and improve my craft, aiming to deliver projects that balance design, performance, and usability. You can find more of my work in the projects section and on my GitHub — take a look!",
+  "avatar": "./images/avatar.svg",
+  "languages": ["html.svg", "css-3.svg", "js.svg", "react.svg", "sass.svg","tailwindcss.svg", "vite.svg"],
+  "projects": [
+    {
+      "name": "Browser extension manager",
+      "id": 1,
+      "languages": ["HTML ", "ReactJs", "SASS", "framer-motion"],
+      "Code": "https://github.com/prabhu7x/Browser-extension-manager.git",
+      "Live URL": "https://prabhu7x.github.io/Browser-extension-manager/",
+      "images": ["desktop-design-dark-active.webp", "desktop-design-light-active.webp"],
+      "description": "This project is a responsive web extension-style interface built with React.js, SCSS, and Framer Motion for subtle yet effective UI animations. It allows users to toggle various extension options and filters, with active and inactive states visually represented. The layout is crafted using a mix of CSS Grid and Flexbox, ensuring responsiveness across all screen sizes. A custom dark/light mode theme switch is integrated, and useReducer is used to manage the UI state, making toggling logic and filter state handling scalable and efficient. This project highlights my skills in building interactive, theme-aware UIs with clean state management and modern CSS layout techniques."
+    },
+    {
+      "name": "Job listing webpage",
+      "id": 2,
+      "languages": ["HTML ", "ReactJs", "SASS", "framer-motion"],
+      "Code": "https://github.com/prabhu7x/Job-Listing-master.git",
+      "Live URL": "https://prabhu7x.github.io/Job-Listing-master/",
+      "images": ["job-listing-preview-dekstop-1.webp", "job-listing-preview-dekstop-2.webp","job-listing-preview-mobile-1.webp","job-listing-preview-mobile-2.webp"],
+      "description": "I built a fully responsive job listing webpage as part of a Frontend Mentor challenge using React.js, SCSS, and Framer Motion for smooth animations. The project features an interactive interface where users can filter job listings by multiple keywords such as role, level, tools, and languages. The filtering logic is implemented using JavaScript’s filter() method and dynamically updates the UI in real-time. The application is designed to be mobile-friendly and includes animated transitions for an enhanced user experience. This project demonstrates my ability to combine modern frontend tools to create clean, responsive, and interactive user interfaces."
+    },
+    {
+      "name": "Product List with cart",
+      "id": 3,
+      "languages": ["HTML ", "ReactJs ", "SASS ", "Redux"],
+      "Code": "https://github.com/prabhu7x/product-list-with-cart-main.git",
+      "Live URL": "https://prabhu7x.github.io/product-list-with-cart-main/",
+      "images": ["product-list-desktop-1.webp","product-list-desktop-confirmed-1.webp","product-list-mobile-1.webp","product-list-mobile-confirmed.webp"],
+      "description": "This responsive e-commerce interface showcases a list of products with a dynamic shopping cart system, built using React.js, SCSS, and Redux for global state management. Users can seamlessly add or remove items from the cart, with real-time updates reflected across the UI. The layout adapts smoothly to all screen sizes, and subtle CSS animations enhance user feedback during interactions. This project demonstrates my ability to implement complex state-driven features like cart logic while maintaining a clean, animated, and user-friendly interface."
+    },
+    {
+      "name": "Multi-Step form submission",
+      "id": 4,
+      "languages": ["HTML ", "ReactJs ", "SASS "],
+      "Code": "https://github.com/prabhu7x/multi-step-form-main.git",
+      "Live URL": "https://prabhu7x.github.io/multi-step-form-main/",
+      "images": ["multi-step-form-desktop-1.webp","multi-step-form-desktop-2.webp","multi-step-form-desktop-3.webp","multi-step-form-desktop-4.webp"],
+      "description": "This project is a fully responsive multi-step form built using React.js, SCSS, and React Router DOM, designed for seamless step-by-step user input. It features a dynamic step indicator UI that clearly highlights the user's current progress and provides intuitive navigation between steps. The form includes real-time validation with user-friendly error messages, including checks for invalid inputs like email using regex patterns. Form data is managed globally using Redux, ensuring a scalable and centralized state structure across steps. The application is built with reusable and modular components, making it easy to extend or adapt for other forms such as registration, checkout, or surveys. Focused on clean UX, this form guides users through the process with clarity, validation feedback, and smooth transitions."
+    }
+  ]
+}

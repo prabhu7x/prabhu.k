@@ -1,0 +1,32 @@
+@use './animations';
+
+footer {
+    padding: 1.3rem;
+    .inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p {
+            margin: 1rem;
+            margin-bottom: 1rem;
+        }
+        .links {
+            display: flex;
+            gap: 2rem;
+        }
+    }
+    img {
+        width: 30px;
+        filter: var(--svg-col);
+        &:hover {
+            scale: 1.09;
+            transition: all .2s ease-in-out;
+            filter: brightness(0) saturate(100%) invert(29%) sepia(99%) saturate(6761%) hue-rotate(320deg) brightness(96%) contrast(112%);
+        }
+        
+        &:active {
+            transform: scale(0.60);
+        }
+    }
+}

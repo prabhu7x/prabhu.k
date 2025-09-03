@@ -1,0 +1,505 @@
+.avatar {
+  animation: pulse 5s ease-in-out infinite;
+  border-radius: 50%;
+  display: block;
+}
+.avatar:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); /* blue glow */
+}
+
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid #06b6d4;
+  border-radius: 50%;
+  animation: rotate 8s linear infinite;
+}
+
+.avatar-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.avatar-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 50%;
+  filter: blur(15px);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+footer {
+  padding: 1.3rem;
+}
+footer .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .inner p {
+  margin: 1rem;
+  margin-bottom: 1rem;
+}
+footer .inner .links {
+  display: flex;
+  gap: 2rem;
+}
+footer img {
+  width: 30px;
+  filter: var(--svg-col);
+}
+footer img:hover {
+  scale: 1.09;
+  transition: all 0.2s ease-in-out;
+  filter: brightness(0) saturate(100%) invert(29%) sepia(99%) saturate(6761%) hue-rotate(320deg) brightness(96%) contrast(112%);
+}
+footer img:active {
+  transform: scale(0.6);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+:root {
+  --btn-shadow-color: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+html.dark {
+  --bg: #1F2937;
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --muted-bg: #374151;
+  --accent-main: #3B82F6;
+  --text-extra: #06B6D4;
+  --accent-yellow: #F59E0B;
+  --accent-secondary: #93C5FD;
+  --svg-col: brightness(0) invert(1);
+  --particle-color: #ffffff;
+  --links-color: #FF007F;
+  --btn-shadow: 0 4px 6px rgba(0, 0, 0, 0.6),
+          0 1px 3px rgba(255, 255, 255, 0.05);
+  --btn-shadow-hover: var(--btn-shadow);
+}
+
+html.light {
+  --bg: #FACC15;
+  --text-primary: #1F2937;
+  --text-secondary: #374151;
+  --muted-bg: #FDE68A;
+  --accent-main: #2563EB;
+  --text-extra: #1dc690;
+  --accent-yellow: #FACC15;
+  --accent-secondary: #475569;
+  --svg-col: brightness(1) invert(0);
+  --particle-color: #000000;
+  --btn-shadow: none;
+  --btn-shadow-hover: var(--btn-shadow-color);
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url("/assets/fonts/Quicksand-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: LeagueSpartan;
+  src: url("/assets/fonts/LeagueSpartan-VariableFont_wght.ttf");
+}
+.btn-animation {
+  box-shadow: var(--btn-shadow);
+  transition: transform 0.11s ease-in;
+}
+.btn-animation:hover {
+  transform: scale(1.03);
+  box-shadow: var(--btn-shadow-hover);
+}
+.btn-animation:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+#tsparticles {
+  background: var(--bg);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "LeagueSpartan";
+  src: url("/assets/fonts/LeagueSpartan-VariableFont_wght.ttf");
+  font-weight: normal;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  position: relative;
+  margin: 0;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, fill 0.4s ease, stroke 0.4s ease;
+}
+
+button {
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--muted-bg);
+}
+header nav {
+  display: flex;
+}
+header nav a {
+  text-decoration: none;
+  color: var(--text-primary);
+  margin-left: 2rem;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#home {
+  text-align: center;
+}
+#home .toggleTheme {
+  all: unset;
+  padding: 0.3rem 0.7rem;
+  font-size: 1rem;
+  background-color: transparent;
+  color: var(--text-primary);
+  border: var(--muted-bg) 1px solid;
+  font-weight: bold;
+  position: absolute;
+  left: -1.7rem;
+  top: 2.3rem;
+  transform: rotate(90deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.11s ease-in;
+}
+#home .toggleTheme:hover {
+  transform: rotate(90deg) scale(1.03);
+}
+#home .toggleTheme:active {
+  transform: rotate(90deg) scale(0.97);
+}
+#home .toggleTheme img {
+  width: 0.9rem;
+  margin-left: 7px;
+  filter: var(--svg-col);
+  margin-bottom: 2px;
+}
+#home h1 {
+  font-size: 2rem;
+  font-family: "LeagueSpartan";
+  src: url("/assets/fonts/LeagueSpartan-VariableFont_wght.ttf");
+  font-weight: normal;
+}
+#home h1 .name {
+  font-weight: bold;
+  color: var(--accent-main);
+  display: inline-block;
+  opacity: 0;
+}
+#home h1 span {
+  color: var(--text-secondary);
+  display: inline-block;
+}
+#home h2 {
+  font-size: 1.7rem;
+  margin: 2.5rem 1rem;
+  line-height: 1.6rem;
+  padding: 0 2rem;
+  line-height: 2rem;
+  color: var(--accent-secondary);
+}
+#home h2 span {
+  color: var(--text-primary);
+}
+#home .gt-about-btn {
+  cursor: pointer;
+  padding: 1rem 2.5rem;
+  border: solid 1px var(--muted-bg);
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  background: linear-gradient(120deg, var(--text-primary) 0%, var(--muted-bg) 20%, var(--text-primary) 40%, var(--text-primary) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+#about {
+  padding: 1rem 1.3rem;
+  min-height: 100vh;
+  height: 100%;
+}
+#about .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#about .hero .avatar {
+  border-radius: 50%;
+  width: 50vw;
+  opacity: 0.9;
+}
+#about .text-container {
+  min-height: 5rem;
+  transition: all 1s ease-in-out;
+  animation: animate 1s ease;
+}
+#about .text-container p {
+  text-indent: 2rem;
+  line-height: 1.4rem;
+  padding: 2rem 0;
+  height: 100%;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+#about .text-container p button {
+  all: unset;
+  color: var(--muted-bg);
+}
+#about .text-container .btn-cv {
+  display: flex;
+  align-items: center;
+}
+#about .text-container .btn-cv #gt-project-btn {
+  text-decoration: none;
+  display: block;
+  padding: 1rem;
+  width: 100%;
+  border: solid var(--muted-bg) 1px;
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--accent-main);
+  letter-spacing: 3px;
+}
+#about .text-container .btn-cv a {
+  position: relative;
+}
+#about .text-container .btn-cv a:hover .tooltip {
+  display: initial;
+}
+#about .text-container .btn-cv a .tooltip {
+  display: none;
+  position: absolute;
+  width: 120px;
+  text-align: center;
+  color: cyan;
+  padding: 0.5rem;
+  top: -35px;
+  left: -15px;
+  font-weight: bold;
+  background: linear-gradient(120deg, var(--text-primary) 0%, var(--muted-bg) 20%, var(--text-primary) 40%, var(--text-primary) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+#about .text-container .btn-cv a img {
+  height: 54px;
+  width: auto;
+  margin-left: 1rem;
+  margin-top: 4px;
+  box-shadow: none;
+}
+#about .lang-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+#about .lang-icons img {
+  width: 50px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+}
+
+#projects-container .card {
+  padding: 2rem;
+}
+#projects-container .card .inner-card .preview-container img {
+  width: 100%;
+}
+#projects-container .card .inner-card .info p {
+  padding: 1rem 0;
+  line-height: 1.3rem;
+  font-family: "LeagueSpartan";
+  src: url("/assets/fonts/LeagueSpartan-VariableFont_wght.ttf");
+  font-weight: 300;
+}
+#projects-container .card .inner-card .info .technologies {
+  display: flex;
+  gap: 2rem;
+  margin-left: 0 1rem;
+  padding: 2rem 1rem;
+  padding-top: 1rem;
+  flex-wrap: wrap;
+}
+#projects-container .card .inner-card .info .technologies li {
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+#projects-container .card .inner-card .info .technologies li:nth-child(even) {
+  color: var(--text-primary);
+}
+#projects-container .card .inner-card .info .technologies li:nth-child(odd) {
+  color: var(--text-secondary);
+}
+#projects-container .card .inner-card .info .url a {
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-size: 1rem;
+  color: var(--accent-main);
+  display: inline-block;
+  transition: all 0.11s ease-in;
+  font-weight: 500;
+}
+#projects-container .card .inner-card .info .url a:hover {
+  color: var(--links-color);
+}
+#projects-container .card .inner-card .info .url a:active {
+  transform: scale(0.97);
+}
+
+@keyframes animate {
+  0% {
+    height: 50%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+.particles-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 800px) {
+  #home h1 {
+    font-size: 7rem;
+    padding: 2rem;
+  }
+  #home h2 {
+    font-size: 4rem;
+    padding: 1rem;
+    line-height: 4rem;
+    padding: 0 3rem;
+  }
+  #home button {
+    padding: 1rem 3.5rem;
+    font-size: 1.5rem;
+  }
+  #about {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+  }
+  #about .hero {
+    width: 40vw;
+  }
+  #about .hero .text-container p {
+    font-size: 1.22rem;
+    font-weight: 350;
+    line-height: 1.8rem;
+  }
+  #about .hero .text-container .btn-cv #gt-project-btn {
+    width: 50%;
+    font-size: 1.5rem;
+  }
+  #about .hero .avatar {
+    width: 15vw;
+  }
+  #about .lang-icons {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5rem;
+  }
+  #about .lang-icons img {
+    width: 5rem;
+  }
+  #projects-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 3rem;
+    padding: 5rem;
+  }
+  #projects-container .card .inner-card .info p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+  #projects-container .card .inner-card .info .technologies li {
+    font-size: 1.056rem;
+  }
+  #projects-container .card .inner-card .info .url a {
+    font-size: 1.3rem;
+  }
+}
+footer img {
+  height: 45px;
+}/*# sourceMappingURL=App.css.map */

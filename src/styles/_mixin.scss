@@ -1,0 +1,23 @@
+
+@mixin shinning-text{
+    background: linear-gradient(
+        120deg,
+          var(--text-primary) 0%,
+          var(--muted-bg) 20%,
+          var(--text-primary) 40%,
+          var(--text-primary) 100%
+        );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}

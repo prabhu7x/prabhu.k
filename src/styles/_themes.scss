@@ -1,0 +1,37 @@
+:root {
+    --btn-shadow-color: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+html.dark {
+    --bg: #1F2937;
+    --text-primary: #F9FAFB;
+    --text-secondary: #9CA3AF;
+    --muted-bg: #374151;
+    --accent-main: #3B82F6;
+
+    --text-extra: #06B6D4;
+    --accent-yellow: #F59E0B;
+    --accent-secondary: #93C5FD;
+    --svg-col: brightness(0) invert(1);
+    --particle-color: #ffffff; 
+    --links-color: #FF007F;
+    --btn-shadow: 0 4px 6px rgba(0, 0, 0, 0.6),
+            0 1px 3px rgba(255, 255, 255, 0.05);
+    --btn-shadow-hover: var(--btn-shadow);
+}
+
+html.light {
+    --bg: #FACC15;
+    --text-primary: #1F2937;
+    --text-secondary: #374151;
+    --muted-bg: #FDE68A;
+    --accent-main: #2563EB;
+
+    --text-extra: #1dc690;
+    --accent-yellow: #FACC15;
+    --accent-secondary: #475569;
+    --svg-col: brightness(1) invert(0);
+    --particle-color: #000000; 
+    --btn-shadow: none;
+    --btn-shadow-hover: var(--btn-shadow-color);
+}
