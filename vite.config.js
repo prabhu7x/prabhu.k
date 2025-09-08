@@ -7,4 +7,4 @@ export default defineConfig({
   plugins: [react()],
 });
 
-process.env.BROWSER = "chromium";
+// process.env.BROWSER = 'chromium'

@@ -33,7 +33,7 @@ Local development setup
 
 ```bash
 git clone https://github.com/prabhu7x/prabhu.k.git
-cd prabhu7.k
+cd prabhu.k
 npm install
 npm run dev
 ```

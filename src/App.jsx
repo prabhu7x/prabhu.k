@@ -35,7 +35,7 @@ function App() {
         {/* auto scroll to top when navigate to path */}
         <ScrollToTop smoother={smoother} />
         <Routes>
-          <Route path="/" element={<HomeLayout smoother={smoother} />} />
+          <Route index path="/" element={<HomeLayout smoother={smoother} />} />
           <Route path="/projects" element={<Projects />} />
         </Routes>
         <Footer />
